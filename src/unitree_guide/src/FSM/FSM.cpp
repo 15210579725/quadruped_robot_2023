@@ -33,6 +33,7 @@ void FSM::initialize(){
 }
 
 void FSM::run(){
+    //1. finish data send and receive 2. run wavegen 3. run estimator
     _startTime = getSystemTime();
     _ctrlComp->sendRecv();
     _ctrlComp->runWaveGen();

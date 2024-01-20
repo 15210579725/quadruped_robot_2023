@@ -1,0 +1,8 @@
+mpc_ctrl
+/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/.private/mpc_ctrl/cmake.lock /home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/./cmake.lock
+/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/.private/mpc_ctrl/lib/libhardware_dog_lib.so /home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/lib/libhardware_dog_lib.so
+/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/.private/mpc_ctrl/lib/libdog_lib.so /home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/lib/libdog_lib.so
+/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/.private/mpc_ctrl/lib/mpc_ctrl/mpc_ctrl /home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/lib/mpc_ctrl/mpc_ctrl
+/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/.private/mpc_ctrl/lib/pkgconfig/mpc_ctrl.pc /home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/lib/pkgconfig/mpc_ctrl.pc
+/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/.private/mpc_ctrl/share/mpc_ctrl/cmake/mpc_ctrlConfig-version.cmake /home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/share/mpc_ctrl/cmake/mpc_ctrlConfig-version.cmake
+/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/.private/mpc_ctrl/share/mpc_ctrl/cmake/mpc_ctrlConfig.cmake /home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/share/mpc_ctrl/cmake/mpc_ctrlConfig.cmake

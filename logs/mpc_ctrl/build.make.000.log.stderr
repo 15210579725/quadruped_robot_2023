@@ -1,0 +1,115 @@
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:23[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/ConvexMpc.h:4:[m[K [01;35m[Kwarning: [m[K"EIGEN_STACK_ALLOCATION_LIMIT" redefined
+    4 | #define EIGEN_STACK_ALLOCATION_LIMIT 0
+      | 
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:88[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/local/include/OsqpEigen/Data.hpp:12[m[K,
+                 from [01m[K/usr/local/include/OsqpEigen/OsqpEigen.h:11[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:17[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:801:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+  801 | #define EIGEN_STACK_ALLOCATION_LIMIT 131072
+      | 
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/Utils.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:[m[K In member function ‘[01m[Kbool BezierUtils::reset_foot_pos_curve()[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:40:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   40 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:22[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:[m[K In member function ‘[01m[Kbool BezierUtils::reset_foot_pos_curve()[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:40:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   40 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/BasicEKF.h:6[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/BasicEKF.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:[m[K In member function ‘[01m[Kbool BezierUtils::reset_foot_pos_curve()[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:40:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   40 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/ConvexMpc.h:16[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/ConvexMpc.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:[m[K In member function ‘[01m[Kbool BezierUtils::reset_foot_pos_curve()[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:40:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   40 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:25[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/filter.hpp:[m[K In member function ‘[01m[Kdouble MovingWindowFilter::CalculateAverage(double)[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/filter.hpp:25:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   25 |   if ([01;35m[Kvalue_deque_.size() < window_size_[m[K) {
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:[m[K In member function ‘[01m[Kvoid RobotControl::generate_swing_legs_ctrl(CtrlStates&, double)[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:184:10:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klast_contacts[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  184 |     bool [01;35m[Klast_contacts[m[K[NUM_LEG];
+      |          [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:[m[K In member function ‘[01m[KEigen::Matrix<double, 3, 4> RobotControl::compute_grf(CtrlStates&, double)[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:387:18:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool OsqpEigen::Solver::solve()[m[K’ is deprecated: Use solveProblem() instead. [[01;35m[K-Wdeprecated-declarations[m[K]
+  387 |     solver.solve([01;35m[K)[m[K;
+      |                  [01;35m[K^[m[K
+In file included from [01m[K/usr/local/include/OsqpEigen/OsqpEigen.h:13[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:17[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/RobotControl.cpp:1[m[K:
+[01m[K/usr/local/include/OsqpEigen/Solver.hpp:120:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  120 |         bool [01;36m[Ksolve[m[K();
+      |              [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:23[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:32[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/HardwareROS.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/ConvexMpc.h:4:[m[K [01;35m[Kwarning: [m[K"EIGEN_STACK_ALLOCATION_LIMIT" redefined
+    4 | #define EIGEN_STACK_ALLOCATION_LIMIT 0
+      | 
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:88[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:5[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/HardwareROS.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:801:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+  801 | #define EIGEN_STACK_ALLOCATION_LIMIT 131072
+      | 
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:22[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:32[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/HardwareROS.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:[m[K In member function ‘[01m[Kbool BezierUtils::reset_foot_pos_curve()[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:40:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   40 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:25[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:32[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/HardwareROS.cpp:1[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/filter.hpp:[m[K In member function ‘[01m[Kdouble MovingWindowFilter::CalculateAverage(double)[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/filter.hpp:25:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   25 |   if ([01;35m[Kvalue_deque_.size() < window_size_[m[K) {
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:23[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:32[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/MainHardware.cpp:13[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/ConvexMpc.h:4:[m[K [01;35m[Kwarning: [m[K"EIGEN_STACK_ALLOCATION_LIMIT" redefined
+    4 | #define EIGEN_STACK_ALLOCATION_LIMIT 0
+      | 
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:88[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:5[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/MainHardware.cpp:13[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:801:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+  801 | #define EIGEN_STACK_ALLOCATION_LIMIT 131072
+      | 
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:22[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:32[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/MainHardware.cpp:13[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:[m[K In member function ‘[01m[Kbool BezierUtils::reset_foot_pos_curve()[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/Utils.h:40:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   40 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+In file included from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/RobotControl.h:25[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/HardwareROS.h:32[m[K,
+                 from [01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/MainHardware.cpp:13[m[K:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/filter.hpp:[m[K In member function ‘[01m[Kdouble MovingWindowFilter::CalculateAverage(double)[m[K’:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/../include/filter.hpp:25:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K-Wsign-compare[m[K]
+   25 |   if ([01;35m[Kvalue_deque_.size() < window_size_[m[K) {
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/MainHardware.cpp:[m[K In lambda function:
+[01m[K/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/src/MainHardware.cpp:44:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kstart[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   44 |         ros::Time [01;35m[Kstart[m[K = ros::Time::now();
+      |                   [01;35m[K^~~~~[m[K

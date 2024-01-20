@@ -1,0 +1,7 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/lib/python3/dist-packages",
+        "/home/mzx/Desktop/unitree_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

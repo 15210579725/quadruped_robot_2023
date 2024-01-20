@@ -26,7 +26,7 @@ private:
     void calcWave(Vec4 &phase, VecInt4 &contact, WaveStatus status);
 
     double _period;
-    double _stRatio;
+    double _stRatio;    //stance ratio
     Vec4 _bias;
 
     Vec4 _normalT;                   // [0, 1)

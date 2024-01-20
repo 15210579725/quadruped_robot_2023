@@ -25,6 +25,7 @@ void GaitGenerator::restart(){
     _vxyGoal.setZero();
 }
 
+// calculate desired foot position and velocity
 void GaitGenerator::run(Vec34 &feetPos, Vec34 &feetVel){
     if(_firstRun){
         _startP = _est->getFeetPos();
@@ -32,8 +33,8 @@ void GaitGenerator::run(Vec34 &feetPos, Vec34 &feetVel){
     }
 
     for(int i(0); i<4; ++i){
-        if((*_contact)(i) == 1){
-            if((*_phase)(i) < 0.5){
+        if((*_contact)(i) == 1){    //stance stay in the same position
+            if((*_phase)(i) < 0.5){ //feet might move before 0.5 Period ?
                 _startP.col(i) = _est->getFootPos(i);
             }
             feetPos.col(i) = _startP.col(i);

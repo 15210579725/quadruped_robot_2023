@@ -1,0 +1,34 @@
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_upstream
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_HighState
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_LowState
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_IMU
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_HighCmd
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_BmsState
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_downstream
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_LED
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_LowCmd
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_MotorCmd
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_MotorState
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_Cartesian
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target _unitree_legged_msgs_generate_messages_check_deps_BmsCmd
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[ 19%] Built target unitree_legged_msgs_generate_messages_lisp
+[ 38%] Built target unitree_legged_msgs_generate_messages_cpp
+[ 59%] Built target unitree_legged_msgs_generate_messages_eus
+[ 80%] Built target unitree_legged_msgs_generate_messages_py
+[100%] Built target unitree_legged_msgs_generate_messages_nodejs
+[100%] Built target unitree_legged_msgs_generate_messages

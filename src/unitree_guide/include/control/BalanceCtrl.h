@@ -14,7 +14,7 @@
 
 class BalanceCtrl{
 public:
-    BalanceCtrl(double mass, Mat3 Ib, Mat6 S, double alpha, double beta);
+    BalanceCtrl(double mass, Mat3 Ib, Mat6 S, double alpha, double beta);   //3 coefficient matrix
     BalanceCtrl(QuadrupedRobot *robModel);
     Vec34 calF(Vec3 ddPcd, Vec3 dWbd, RotMat rotM, Vec34 feetPos2B, VecInt4 contact);
 #ifdef COMPILE_DEBUG

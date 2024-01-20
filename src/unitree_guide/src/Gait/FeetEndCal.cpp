@@ -40,7 +40,7 @@ Vec3 FeetEndCal::calFootPos(int legID, Vec2 vxyGoalGlobal, float dYawGoal, float
     _nextStep(1) += _feetRadius(legID) * sin(_yaw + _feetInitAngle(legID) + _nextYaw);
 
     _footPos = _est->getPosition() + _nextStep;
-    _footPos(2) = 0.0;
+    _footPos(2) = 0.0;  //plane ground
 
     return _footPos;
 }

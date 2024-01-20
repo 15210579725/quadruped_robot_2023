@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/devel/include/**",
+        "/home/mzx/Desktop/unitree_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/hardware_ctrl/include/**",
+        "/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/mpc_ctrl/include/**",
+        "/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/unitree_ros/unitree_controller/include/**",
+        "/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/unitree_guide/include/**",
+        "/home/mzx/Desktop/quad_ruped_ws/quadruped_robot_2023/src/unitree_ros/unitree_legged_control/include/**",
+        "/home/mzx/Desktop/unitree_ws/src/unitree_guide/unitree_actuator_sdk/unitree_motor_ctrl/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

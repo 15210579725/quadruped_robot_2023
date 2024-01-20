@@ -40,7 +40,7 @@ void WaveGenerator::calcContactPhase(Vec4 &phaseResult, VecInt4 &contactResult, 
 
     calcWave(_phase, _contact, status);
 
-    if (status != _statusPast)
+    if (status != _statusPast)  //change to all stance or all swing
     {
         if (_switchStatus.sum() == 0)
         {
@@ -58,7 +58,7 @@ void WaveGenerator::calcContactPhase(Vec4 &phaseResult, VecInt4 &contactResult, 
         }
     }
 
-    if (_switchStatus.sum() != 0)
+    if (_switchStatus.sum() != 0)   //now is switching status
     {
         for (int i(0); i < 4; ++i)
         {
@@ -97,17 +97,19 @@ float WaveGenerator::getT()
     return _period;
 }
 
+//return normalized phase and contact   (stance or swing)
 void WaveGenerator::calcWave(Vec4 &phase, VecInt4 &contact, WaveStatus status)
 {
-    if (status == WaveStatus::WAVE_ALL)
+    
+    if (status == WaveStatus::WAVE_ALL) //normally walk
     {
         _passT = (double)(getSystemTime() - _startT) * 1e-6;
         for (int i(0); i < 4; ++i)
         {
-            _normalT(i) = fmod(_passT + _period - _period * _bias(i), _period) / _period;
-            if (_normalT(i) < _stRatio)
+            _normalT(i) = fmod(_passT + _period - _period * _bias(i), _period) / _period;   //float mod
+            if (_normalT(i) < _stRatio) 
             {
-                contact(i) = 1;
+                contact(i) = 1; //stance
                 phase(i) = _normalT(i) / _stRatio;
             }
             else
@@ -117,12 +119,12 @@ void WaveGenerator::calcWave(Vec4 &phase, VecInt4 &contact, WaveStatus status)
             }
         }
     }
-    else if (status == WaveStatus::SWING_ALL)
+    else if (status == WaveStatus::SWING_ALL)   //fly
     {
         contact.setZero();
         phase << 0.5, 0.5, 0.5, 0.5;
     }
-    else if (status == WaveStatus::STANCE_ALL)
+    else if (status == WaveStatus::STANCE_ALL)  //stand
     {
         contact.setOnes();
         phase << 0.5, 0.5, 0.5, 0.5;
