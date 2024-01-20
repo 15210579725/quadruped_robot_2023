@@ -4,12 +4,11 @@ HardwareROS::HardwareROS(ros::NodeHandle &_nh) {
     nh = _nh;
 
     // 和电机通讯的ROS话题
-    motor_cmd = nh.advertise<unitree_legged_msgs::motorcmd>("/dog_hardware/motorcmd", 100);
-    motor_data = nh.subscribe<unitree_legged_msgs::motordata>("/dog_hardware/motordata", 1000, &HardwareROS::receive_motor_state, this);
-
+    motor_cmd = nh.advertise<unitree_legged_msgs::downstream>("/downstream", 100);
+    motor_data = nh.subscribe<unitree_legged_msgs::upstream>("/upstream", 1000, &HardwareROS::receive_motor_state, this);
     // 接受IMU数据的ROS话题
     imu_data = nh.subscribe<sensor_msgs::Imu>("/dog_hardware/imu", 1000, &HardwareROS::receive_imu_state, this);
-
+    usleep(2000000);
     // 调试用的ROS话题
     pub_joint_cmd = nh.advertise<sensor_msgs::JointState>("/dog_hardware/joint_torque_cmd", 100);
     pub_joint_angle = nh.advertise<sensor_msgs::JointState>("/dog_hardware/joint_foot", 100);
@@ -195,14 +194,14 @@ bool HardwareROS::send_cmd() {
     // 计算关节力矩
     _root_control.compute_joint_torques(dog_ctrl_states);
 
-    unitree_legged_msgs::motorcmd motordown;
+    unitree_legged_msgs::downstream motordown;
 
     // 下发控制命令
     // 注意dog_ctrl_states.joint_torques中腿的顺序为FL, FR, RL, RR, 下位机中腿的顺序为FL, RL, FR, RR
     for (int i = 0; i < NUM_DOF; i++) {
         motordown.id[i] = i;        
-        motordown.Pos[i] = PosStopF;    // 禁止位置环
-        motordown.W[i] = VelStopF;      // 禁止速度环
+        motordown.Pos[i] = 0;    // 禁止位置环
+        motordown.W[i] = 0;      // 禁止速度环
         motordown.K_P[i] = 0;
         motordown.K_W[i] = 0;
         int swap_i = swap_joint_indices(i);
@@ -214,14 +213,15 @@ bool HardwareROS::send_cmd() {
     return true;
 }
 
-void HardwareROS::receive_motor_state(const unitree_legged_msgs::motordata::ConstPtr &motorup) {
+void HardwareROS::receive_motor_state(const unitree_legged_msgs::upstream::ConstPtr &motorup) {
     ros::Time prev = ros::Time::now();
     ros::Time now = ros::Time::now();
     ros::Duration dt(0);
-    
-    while (destruct == false) {
+
+    while (true) {
         // 向dog_ctrl_states中填充数据, 注意state中的顺序是FL, RL, FR, RR, dog_ctrl_states中顺序为FL, FR, RL, RR
         // 获取当前时间(s)
+        //debug
         now = ros::Time::now();
         dt = now - prev;
         prev = now;
@@ -232,15 +232,12 @@ void HardwareROS::receive_motor_state(const unitree_legged_msgs::motordata::Cons
             int swap_i = swap_joint_indices(i);
             dog_ctrl_states.joint_vel[i] = motorup->W[swap_i];
             dog_ctrl_states.joint_pos[i] = motorup->Pos[swap_i];
+            // std::cout << dog_ctrl_states.joint_vel[i] << " ";
+            // std::cout << dog_ctrl_states.joint_pos[i] << " ";
         }
 
         // 估计足端力
         // to be continued
-
-
-
-
-
 
         // 发布关节状态
         for (int i = 0; i < NUM_DOF; ++i) {
@@ -250,7 +247,7 @@ void HardwareROS::receive_motor_state(const unitree_legged_msgs::motordata::Cons
         for (int i = 0; i < NUM_LEG; ++i) {
             // 规划的接触状态当作足端速度
             joint_foot_msg.velocity[NUM_DOF + i] = dog_ctrl_states.plan_contacts[i];
-            joint_foot_msg.effort[NUM_DOF + i] = dog_ctrl_states.foot_force[i];
+            //joint_foot_msg.effort[NUM_DOF + i] = dog_ctrl_states.foot_force[i];
         }
         joint_foot_msg.header.stamp = ros::Time::now();
         pub_joint_angle.publish(joint_foot_msg);
@@ -313,4 +310,7 @@ void HardwareROS::receive_imu_state(const sensor_msgs::Imu::ConstPtr &imudata) {
     dog_ctrl_states.imu_acc = Eigen::Vector3d(imudata->linear_acceleration.x, imudata->linear_acceleration.y, imudata->linear_acceleration.z);
     dog_ctrl_states.imu_ang_vel = Eigen::Vector3d(imudata->angular_velocity.x, imudata->angular_velocity.y, imudata->angular_velocity.z);
     dog_ctrl_states.root_ang_vel = dog_ctrl_states.root_rot_mat * dog_ctrl_states.imu_ang_vel;
+    // std::cout << dog_ctrl_states.imu_acc << " ";
+    // std::cout << 1237198 << " ";
+    //std::cout << dog_ctrl_states.joint_pos[i] << " ";
 }

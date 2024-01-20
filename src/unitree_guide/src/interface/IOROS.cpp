@@ -103,8 +103,9 @@ void IOROS::initSend(){
 }
 
 void IOROS::initRecv(){
-    _imu_sub = _nm.subscribe("/dog_hardware/imu", 10, &IOROS::imuCallback, this);
+    our_imu_sub = _nm.subscribe("/dog_hardware/imu", 10, &IOROS::ourimuCallback, this);
     _our_motor = _nm.subscribe("/upstream", 1, &IOROS::motorDataCallback, this);
+    _imu_sub = _nm.subscribe("/trunk_imu", 1, &IOROS::imuCallback, this);
     _servo_sub[0] = _nm.subscribe("/" + _robot_name + "_gazebo/FR_hip_controller/state", 1, &IOROS::FRhipCallback, this);
     _servo_sub[1] = _nm.subscribe("/" + _robot_name + "_gazebo/FR_thigh_controller/state", 1, &IOROS::FRthighCallback, this);
     _servo_sub[2] = _nm.subscribe("/" + _robot_name + "_gazebo/FR_calf_controller/state", 1, &IOROS::FRcalfCallback, this);
@@ -131,7 +132,10 @@ void IOROS::motorDataCallback(const unitree_legged_msgs::upstream& msg)
         _lowState.motorState[id].tauEst = msg.T[i];
     }
 }
-
+void IOROS::ourimuCallback(const sensor_msgs::Imu & msg)
+{ 
+//硬件imu数据接收
+}
 
 void IOROS::imuCallback(const sensor_msgs::Imu & msg)
 { 

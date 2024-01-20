@@ -27,7 +27,7 @@ private:
     void sendCmd(const LowlevelCmd *cmd);
     void recvState(LowlevelState *state);
     ros::NodeHandle _nm;
-    ros::Subscriber _servo_sub[12], _imu_sub;
+    ros::Subscriber _servo_sub[12], _imu_sub,our_imu_sub;
     ros::Subscriber  _our_motor;   //mzx
     ros::Publisher _servo_pub[12];
     //gyk
@@ -44,7 +44,7 @@ private:
 
     //Callback functions for ROS
     void imuCallback(const sensor_msgs::Imu & msg);
-    
+    void ourimuCallback(const sensor_msgs::Imu & msg);
     //our upstream callback functions
     void motorDataCallback(const unitree_legged_msgs::upstream& msg);
 

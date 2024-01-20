@@ -96,8 +96,16 @@ void IOROS::motorDataCallback(const unitree_legged_msgs::downstream& msg)
         _lowCmd.motorCmd[id].q = msg.Pos[i];
         _lowCmd.motorCmd[id].dq = msg.W[i];
         _lowCmd.motorCmd[id].tau = msg.T[i];
+<<<<<<< HEAD
         _lowCmd.motorCmd[id].Kd = msg.K_W[i];
         _lowCmd.motorCmd[id].Kp = msg.K_P[i];
+=======
+        // _lowCmd.motorCmd[id].Kd = msg.K_W[i];
+        // _lowCmd.motorCmd[id].Kp = msg.K_P[i];
+        //初始kp，kd
+        _lowCmd.motorCmd[id].Kd = 0;
+        _lowCmd.motorCmd[id].Kp = 0;
+>>>>>>> 0f0306673bf33d95098cce09a1e1d72ff3ed8439
     }
 }
 void IOROS::imuCallback(const sensor_msgs::Imu & msg)
