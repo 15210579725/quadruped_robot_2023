@@ -25,10 +25,10 @@ private:
     void calcBalanceKp();
     bool checkStepOrNot();
 
-    GaitGenerator *_gait;
-    Estimator *_est;
-    QuadrupedRobot *_robModel;
-    BalanceCtrl *_balCtrl;
+    GaitGenerator *_gait;   //swing leg
+    Estimator *_est;    //get state
+    QuadrupedRobot *_robModel;  /kinematics
+    BalanceCtrl *_balCtrl;  //stance leg
 
     // Rob State
     Vec3  _posBody, _velBody;
@@ -39,7 +39,7 @@ private:
     Vec12 _q;
 
     // Robot command
-    Vec3 _pcd;
+    Vec3 _pcd;  // desired position
     Vec3 _vCmdGlobal, _vCmdBody;
     double _yawCmd, _dYawCmd;
     double _dYawCmdPast;

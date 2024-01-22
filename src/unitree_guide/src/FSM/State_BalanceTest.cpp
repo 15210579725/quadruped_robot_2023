@@ -74,7 +74,7 @@ FSMStateName State_BalanceTest::checkChange(){
 
 void State_BalanceTest::calcTau(){
 
-    _ddPcd = _Kpp*(_pcd - _posBody) + _Kdp * (Vec3(0, 0, 0) - _velBody);
+    _ddPcd = _Kpp*(_pcd - _posBody) + _Kdp * (Vec3(0, 0, 0) - _velBody);    //stay in the same place
     _dWbd  = _kpw*rotMatToExp(_Rd*_G2B_RotMat) + _Kdw * (Vec3(0, 0, 0) - _lowState->getGyroGlobal());
 
     _posFeet2BGlobal = _est->getPosFeet2BGlobal();

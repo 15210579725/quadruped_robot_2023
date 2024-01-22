@@ -43,7 +43,7 @@ State_Trotting::~State_Trotting(){
 
 void State_Trotting::enter(){
     _pcd = _est->getPosition();
-    _pcd(2) = -_robModel->getFeetPosIdeal()(2, 0);
+    _pcd(2) = -_robModel->getFeetPosIdeal()(2, 0);  //pos z
     _vCmdBody.setZero();
     _yawCmd = _lowState->getYaw();
     _Rd = rotz(_yawCmd);
@@ -71,6 +71,13 @@ FSMStateName State_Trotting::checkChange(){
 }
 
 void State_Trotting::run(){
+    //1. get current state including position and velocity
+    //2. get user command
+    //3. calculate desired position, velocity and yaw in global frame
+    //4. generate swing foot gait using PD control(end postion and velocity)
+    //5. calculate stance leg tau and swing leg tau
+    //6. publish tau q dq
+
     _posBody = _est->getPosition();
     _velBody = _est->getVelocity();
     _posFeet2BGlobal = _est->getPosFeet2BGlobal();
@@ -89,8 +96,10 @@ void State_Trotting::run(){
     _gait->setGait(_vCmdGlobal.segment(0,2), _wCmdGlobal(2), _gaitHeight);
     _gait->run(_posFeetGlobalGoal, _velFeetGlobalGoal);
 
-    calcTau();
-    calcQQd();
+    calcTau();  //feed forward torque
+    calc
+    
+    QQd();  //because of model imprecision use pd to help it
 
     if(checkStepOrNot()){
         _ctrlComp->setStartWave();
@@ -141,10 +150,11 @@ void State_Trotting::getUserCmd(){
 
     /* Turning */
     _dYawCmd = -invNormalize(_userValue.rx, _wyawLim(0), _wyawLim(1));
-    _dYawCmd = 0.9*_dYawCmdPast + (1-0.9) * _dYawCmd;
+    _dYawCmd = 0.9*_dYawCmdPast + (1-0.9) * _dYawCmd;   // gradully change
     _dYawCmdPast = _dYawCmd;
 }
 
+//calculate desired position, velocity and yaw in global frame
 void State_Trotting::calcCmd(){
     /* Movement */
     _vCmdGlobal = _B2G_RotMat * _vCmdBody;
@@ -164,6 +174,7 @@ void State_Trotting::calcCmd(){
     _wCmdGlobal(2) = _dYawCmd;
 }
 
+//calculate tau of stance leg and swing leg
 void State_Trotting::calcTau(){
     _posError = _pcd - _posBody;
     _velError = _vCmdGlobal - _velBody;
